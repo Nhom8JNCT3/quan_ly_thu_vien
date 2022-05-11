@@ -58,20 +58,7 @@ create table Sach
 	values('TCC1',N'Toán cao cấp 1', N'Phạm Văn Bình',N'Đại Học Quốc Gia',1998,100,89000,'S002' ),
 		  ('TCC2',N'Toán cao cấp 2', N'Phạm Văn Bình',N'Đại Học Quốc Gia',1998,100,49000,'S002' );
 
-create table TheDocgia
-(
-	Mathe char(5) not null primary key,
-	Hoten nvarchar(50) not null ,
-	Ngaycap date,
-	Ngayhethan date,
-	Diachi nvarchar(100) null,
-	tk char(20) null,
-	mk char(20) null
-)
 
-insert into TheDocgia
-	values('DG01',N'Nguyễn Văn Nam','11/11/2020','11/11/2020',N'Đà Nẵng','vnam', '1'),
-		  ('DG02',N'Nguyễn Văn Nhân','11/11/2020','11/11/2020',N'Đà Nẵng','vnhan', '1');
 create table TheoDoiMuonTra
 (
 	Mathe char(5) primary key,
