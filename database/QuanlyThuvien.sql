@@ -6,7 +6,7 @@ create table BangQuanTri
 (
 	MaNV char(5) not null primary key,
 	Hoten nvarchar(50) not null,
-	Ngaysinh char(10) not null,
+	Ngaysinh date not null,
 	Gioitinh nvarchar(3) null,
 	Chucvu nvarchar(15) null,
 	Diachi nvarchar(100) null,
@@ -34,7 +34,7 @@ insert into LoaiSach
 create table NhaXuatBan
 (
 	MAXB char(5) primary key,
-	TenXB char(20) ,
+	TenXB nvarchar(20) not null,
 	Diachi nvarchar(100) null
 	
 )
@@ -47,8 +47,8 @@ create table Sach
 	Masach char(10) not null primary key,
 	Tensach nvarchar(50) not null ,
 	Tacgia nvarchar(20) ,
-	TenXB nvarchar(20),
-	NamXB int,
+	MAXB char(5),
+	NamXB date,
 	Sotrang int,
 	Gia int,
 	Maloai char(10),
@@ -61,14 +61,18 @@ create table Sach
 
 create table TheoDoiMuonTra
 (
-	Mathe char(5) primary key,
-	Hoten nvarchar(50) not null,
-	Ngaymuon char(20),
-	Ngayhentra char(20),
-	Ngaytra char(20),
-	Masachmuon char not null,
-	Maschluongtra char not null
+	MSmuon char(5) primary key,
+	MaDocgia char(5),
+	Masach char(5),
+	Ngaymuon date,
+	Ngayhentra date,
+	Ngaytra date,
+	constraint FK_ChiTietDonHang Foreign key (MaDocgia,Masach)
 )
+
+insert into TheoDoiMuonTra
+	values('MSM01','MDG01','TCC2','23/2/2022','30/5/2022','15/5/2022'),
+			('MSM01','MDG01','TCC1','23/2/2022','30/5/2022','15/5/2022');
 create table Docgia
 (
 	MaDocgia char(5) not null primary key,
