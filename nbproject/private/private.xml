@@ -3,21 +3,24 @@
     <editor-bookmarks xmlns="http://www.netbeans.org/ns/editor-bookmarks/2" lastBookmarkId="0"/>
     <open-files xmlns="http://www.netbeans.org/ns/projectui-open-files/2">
         <group>
-            <file>file:/D:/study/nam2/hk2/java/BTQuanLiThuVien/src/model/Docgia.java</file>
-            <file>file:/D:/study/nam2/hk2/java/BTQuanLiThuVien/src/View/ThemSachFrame.java</file>
-            <file>file:/D:/study/nam2/hk2/java/BTQuanLiThuVien/src/model/Sach.java</file>
-            <file>file:/D:/study/nam2/hk2/java/BTQuanLiThuVien/src/Dao/SachDao.java</file>
-            <file>file:/D:/study/nam2/hk2/java/BTQuanLiThuVien/src/View/QuanlidocgiaFrame.java</file>
-            <file>file:/D:/study/nam2/hk2/java/BTQuanLiThuVien/src/dangnhap/Login.java</file>
-            <file>file:/D:/study/nam2/hk2/java/BTQuanLiThuVien/src/Dao/JDBCConnection.java</file>
-            <file>file:/D:/study/nam2/hk2/java/BTQuanLiThuVien/src/View/ThemdocgiaFrame.java</file>
-            <file>file:/D:/study/nam2/hk2/java/BTQuanLiThuVien/src/Dao/DocgiaDao.java</file>
-            <file>file:/D:/study/nam2/hk2/java/BTQuanLiThuVien/src/Service/DocgiaService.java</file>
-            <file>file:/D:/study/nam2/hk2/java/BTQuanLiThuVien/src/Service/SachService.java</file>
-            <file>file:/D:/study/nam2/hk2/java/BTQuanLiThuVien/src/View/Suadocgia.java</file>
-            <file>file:/D:/study/nam2/hk2/java/BTQuanLiThuVien/src/View/SuaSachFrame.java</file>
-            <file>file:/D:/study/nam2/hk2/java/BTQuanLiThuVien/src/View/NhanVienFrame.java</file>
-            <file>file:/D:/study/nam2/hk2/java/BTQuanLiThuVien/src/View/QuanlisachFrame.java</file>
+            <file>file:/D:/DiskC/Desktop/quan_ly_thu_vien/src/dangnhap/Login.java</file>
+            <file>file:/D:/DiskC/Desktop/quan_ly_thu_vien/src/View/ThemSachFrame.java</file>
+            <file>file:/D:/DiskC/Desktop/quan_ly_thu_vien/src/View/NhanVienFrame.java</file>
+            <file>file:/D:/DiskC/Desktop/quan_ly_thu_vien/src/View/SuaSachFrame.java</file>
+            <file>file:/D:/DiskC/Desktop/quan_ly_thu_vien/src/View/ThemdocgiaFrame.java</file>
+            <file>file:/D:/DiskC/Desktop/quan_ly_thu_vien/src/View/DocgiaFrame.java</file>
+            <file>file:/D:/DiskC/Desktop/quan_ly_thu_vien/src/model/Docgia.java</file>
+            <file>file:/D:/DiskC/Desktop/quan_ly_thu_vien/src/Dao/DocgiaDao.java</file>
+            <file>file:/D:/DiskC/Desktop/quan_ly_thu_vien/src/Service/DSmuontraService.java</file>
+            <file>file:/D:/DiskC/Desktop/quan_ly_thu_vien/src/Service/SachService.java</file>
+            <file>file:/D:/DiskC/Desktop/quan_ly_thu_vien/src/View/QuanlidocgiaFrame.java</file>
+            <file>file:/D:/DiskC/Desktop/quan_ly_thu_vien/src/View/HomeFrame.java</file>
+            <file>file:/D:/DiskC/Desktop/quan_ly_thu_vien/src/Dao/DSmuontraDao.java</file>
+            <file>file:/D:/DiskC/Desktop/quan_ly_thu_vien/src/View/QuanlisachFrame.java</file>
+            <file>file:/D:/DiskC/Desktop/quan_ly_thu_vien/src/model/Sach.java</file>
+            <file>file:/D:/DiskC/Desktop/quan_ly_thu_vien/src/View/Suadocgia.java</file>
+            <file>file:/D:/DiskC/Desktop/quan_ly_thu_vien/src/View/QuanlimuontraFrame.java</file>
+            <file>file:/D:/DiskC/Desktop/quan_ly_thu_vien/src/model/DSmuontra.java</file>
         </group>
     </open-files>
 </project-private>
