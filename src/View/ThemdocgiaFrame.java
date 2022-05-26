@@ -49,6 +49,8 @@ public class ThemdocgiaFrame extends javax.swing.JFrame {
         khacRadioButton = new javax.swing.JRadioButton();
         jLabel9 = new javax.swing.JLabel();
         namsinhTextField = new javax.swing.JTextField();
+        jLabel7 = new javax.swing.JLabel();
+        lopTextField = new javax.swing.JTextField();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
@@ -95,6 +97,8 @@ public class ThemdocgiaFrame extends javax.swing.JFrame {
 
         jLabel9.setText("Năm sinh");
 
+        jLabel7.setText("Lớp");
+
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
@@ -109,18 +113,16 @@ public class ThemdocgiaFrame extends javax.swing.JFrame {
                                 .addGap(6, 6, 6))
                             .addGroup(layout.createSequentialGroup()
                                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                                    .addComponent(jLabel2, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                                     .addComponent(jLabel3, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                                     .addComponent(jLabel4, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
                                 .addGap(12, 12, 12)))
                         .addComponent(jLabel1))
+                    .addComponent(jLabel9)
+                    .addComponent(jLabel2, javax.swing.GroupLayout.PREFERRED_SIZE, 72, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(jLabel6, javax.swing.GroupLayout.PREFERRED_SIZE, 72, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jLabel9))
+                    .addComponent(jLabel7, javax.swing.GroupLayout.PREFERRED_SIZE, 39, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(layout.createSequentialGroup()
-                        .addGap(240, 240, 240)
-                        .addComponent(submitButton))
                     .addGroup(layout.createSequentialGroup()
                         .addComponent(namRadioButton)
                         .addGap(35, 35, 35)
@@ -128,6 +130,7 @@ public class ThemdocgiaFrame extends javax.swing.JFrame {
                         .addGap(18, 18, 18)
                         .addComponent(khacRadioButton))
                     .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
+                        .addComponent(lopTextField)
                         .addComponent(namsinhTextField, javax.swing.GroupLayout.Alignment.LEADING)
                         .addGroup(javax.swing.GroupLayout.Alignment.LEADING, layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
                             .addComponent(backButton)
@@ -136,7 +139,11 @@ public class ThemdocgiaFrame extends javax.swing.JFrame {
                                 .addComponent(idTextField)
                                 .addComponent(usernameTextField)
                                 .addComponent(passwordField)))))
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                .addContainerGap(130, Short.MAX_VALUE))
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addComponent(submitButton)
+                .addGap(50, 50, 50))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -150,7 +157,7 @@ public class ThemdocgiaFrame extends javax.swing.JFrame {
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLabel2)
                     .addComponent(idTextField, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addGap(18, 18, 18)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLabel3, javax.swing.GroupLayout.PREFERRED_SIZE, 20, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(nameTextField))
@@ -168,13 +175,17 @@ public class ThemdocgiaFrame extends javax.swing.JFrame {
                     .addComponent(namRadioButton)
                     .addComponent(nuRadioButton)
                     .addComponent(khacRadioButton))
-                .addGap(18, 18, 18)
+                .addGap(20, 20, 20)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLabel9)
                     .addComponent(namsinhTextField, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 28, Short.MAX_VALUE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 15, Short.MAX_VALUE)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jLabel7)
+                    .addComponent(lopTextField, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGap(18, 18, 18)
                 .addComponent(submitButton)
-                .addGap(16, 16, 16))
+                .addGap(14, 14, 14))
         );
 
         pack();
@@ -193,8 +204,9 @@ public class ThemdocgiaFrame extends javax.swing.JFrame {
         docgia.setTendangnhap(usernameTextField.getText());
         docgia.setMatkhau(String.valueOf(passwordField.getPassword()));
         docgia.setNamsinh(namsinhTextField.getText());
+        docgia.setLop(lopTextField.getText());
         
-        String gioitinh = "GIOITINH_DOCGIA";
+        String gioitinh = "";
         if (namRadioButton.isSelected()){
             gioitinh += "Nam";
         }
@@ -230,8 +242,10 @@ public class ThemdocgiaFrame extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel4;
     private javax.swing.JLabel jLabel5;
     private javax.swing.JLabel jLabel6;
+    private javax.swing.JLabel jLabel7;
     private javax.swing.JLabel jLabel9;
     private javax.swing.JRadioButton khacRadioButton;
+    private javax.swing.JTextField lopTextField;
     private javax.swing.JRadioButton namRadioButton;
     private javax.swing.JTextField nameTextField;
     private javax.swing.JTextField namsinhTextField;
