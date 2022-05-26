@@ -59,16 +59,20 @@ create table Sach
 		  ('TCC2',N'Toán cao cấp 2', N'Phạm Văn Bình',N'Đại Học Quốc Gia',1998,100,49000,'S002' );
 
 
-create table TheoDoiMuonTra
+create table MuonTra
 (
-	Mathe char(5) primary key,
-	Hoten nvarchar(50) not null,
+	MaMuon char(5) primary key,
+	MaDG char(5) not null,
+	Masach char(5) not null,
 	Ngaymuon char(20),
 	Ngayhentra char(20),
 	Ngaytra char(20),
-	Masachmuon char not null,
-	Maschluongtra char not null
+	
 )
+
+insert into MuonTra
+	values('MS001','MDG01','TCC2','2/2/2022','2/8/2022','5/6/2022'),
+		  ('MS002','MDG01','TCC1','2/2/2022','2/8/2022','5/6/2022');
 create table Docgia
 (
 	MaDocgia char(5) not null primary key,

@@ -60,16 +60,12 @@ public class DocgiaFrame extends javax.swing.JFrame {
 
         jPanel1 = new javax.swing.JPanel();
         jPanel2 = new javax.swing.JPanel();
+        jLabel1 = new javax.swing.JLabel();
         jPanel3 = new javax.swing.JPanel();
-        jButton1 = new javax.swing.JButton();
-        thuesachButton = new javax.swing.JButton();
+        muonButton = new javax.swing.JButton();
+        xsachButton = new javax.swing.JButton();
+        dangxuatButton = new javax.swing.JButton();
         jPanel4 = new javax.swing.JPanel();
-        addButton = new javax.swing.JButton();
-        editButton = new javax.swing.JButton();
-        seachButton = new javax.swing.JButton();
-        trolaiButton = new javax.swing.JButton();
-        jScrollPane1 = new javax.swing.JScrollPane();
-        jTable1 = new javax.swing.JTable();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
@@ -78,29 +74,43 @@ public class DocgiaFrame extends javax.swing.JFrame {
 
         jPanel2.setBackground(new java.awt.Color(255, 255, 255));
 
+        jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/View/download.jpg"))); // NOI18N
+
         javax.swing.GroupLayout jPanel2Layout = new javax.swing.GroupLayout(jPanel2);
         jPanel2.setLayout(jPanel2Layout);
         jPanel2Layout.setHorizontalGroup(
             jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 0, Short.MAX_VALUE)
+            .addComponent(jLabel1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
         );
         jPanel2Layout.setVerticalGroup(
             jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 103, Short.MAX_VALUE)
+            .addComponent(jLabel1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
         );
 
         jPanel3.setBackground(new java.awt.Color(255, 204, 255));
 
-        jButton1.setBackground(new java.awt.Color(255, 204, 51));
-        jButton1.setFont(new java.awt.Font("Tahoma", 1, 12)); // NOI18N
-        jButton1.setForeground(new java.awt.Color(255, 255, 255));
-        jButton1.setText("Quản lí đọc giả");
-
-        thuesachButton.setBackground(new java.awt.Color(255, 255, 204));
-        thuesachButton.setText("Thuê sách");
-        thuesachButton.addActionListener(new java.awt.event.ActionListener() {
+        muonButton.setBackground(new java.awt.Color(255, 255, 204));
+        muonButton.setFont(new java.awt.Font("Tahoma", 0, 12)); // NOI18N
+        muonButton.setText("Mượn sách");
+        muonButton.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                thuesachButtonActionPerformed(evt);
+                muonButtonActionPerformed(evt);
+            }
+        });
+
+        xsachButton.setBackground(new java.awt.Color(255, 255, 204));
+        xsachButton.setText("Xem sách");
+        xsachButton.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                xsachButtonActionPerformed(evt);
+            }
+        });
+
+        dangxuatButton.setBackground(new java.awt.Color(255, 255, 204));
+        dangxuatButton.setText("Đăng xuất");
+        dangxuatButton.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                dangxuatButtonActionPerformed(evt);
             }
         });
 
@@ -109,114 +119,50 @@ public class DocgiaFrame extends javax.swing.JFrame {
         jPanel3Layout.setHorizontalGroup(
             jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel3Layout.createSequentialGroup()
-                .addGap(22, 22, 22)
+                .addGap(30, 30, 30)
                 .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                    .addComponent(jButton1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                    .addComponent(thuesachButton, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-                .addContainerGap(18, Short.MAX_VALUE))
+                    .addComponent(muonButton, javax.swing.GroupLayout.DEFAULT_SIZE, 113, Short.MAX_VALUE)
+                    .addComponent(xsachButton, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(dangxuatButton, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
         jPanel3Layout.setVerticalGroup(
             jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel3Layout.createSequentialGroup()
                 .addGap(18, 18, 18)
-                .addComponent(jButton1, javax.swing.GroupLayout.PREFERRED_SIZE, 48, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                .addComponent(thuesachButton, javax.swing.GroupLayout.PREFERRED_SIZE, 46, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(96, Short.MAX_VALUE))
+                .addComponent(muonButton, javax.swing.GroupLayout.PREFERRED_SIZE, 48, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(18, 18, 18)
+                .addComponent(xsachButton, javax.swing.GroupLayout.PREFERRED_SIZE, 46, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(18, 18, 18)
+                .addComponent(dangxuatButton, javax.swing.GroupLayout.PREFERRED_SIZE, 38, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap(25, Short.MAX_VALUE))
         );
 
         jPanel4.setBackground(new java.awt.Color(204, 204, 255));
-
-        addButton.setIcon(new javax.swing.ImageIcon(getClass().getResource("/View/add.png"))); // NOI18N
-        addButton.setText("Thuê sách");
-        addButton.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                addButtonActionPerformed(evt);
-            }
-        });
-
-        editButton.setIcon(new javax.swing.ImageIcon(getClass().getResource("/View/edit.png"))); // NOI18N
-        editButton.setText("Sửa");
-        editButton.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                editButtonActionPerformed(evt);
-            }
-        });
-
-        seachButton.setIcon(new javax.swing.ImageIcon(getClass().getResource("/View/icons8-search-16.png"))); // NOI18N
-        seachButton.setText("Tìm kiếm");
-        seachButton.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                seachButtonActionPerformed(evt);
-            }
-        });
-
-        trolaiButton.setIcon(new javax.swing.ImageIcon(getClass().getResource("/View/icons8-back-arrow-16.png"))); // NOI18N
-        trolaiButton.setText("Trở lại");
-        trolaiButton.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                trolaiButtonActionPerformed(evt);
-            }
-        });
-
-        jTable1.setModel(new javax.swing.table.DefaultTableModel(
-            new Object [][] {
-                {null, null, null, null},
-                {null, null, null, null},
-                {null, null, null, null},
-                {null, null, null, null}
-            },
-            new String [] {
-                "Title 1", "Title 2", "Title 3", "Title 4"
-            }
-        ));
-        jScrollPane1.setViewportView(jTable1);
 
         javax.swing.GroupLayout jPanel4Layout = new javax.swing.GroupLayout(jPanel4);
         jPanel4.setLayout(jPanel4Layout);
         jPanel4Layout.setHorizontalGroup(
             jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(jPanel4Layout.createSequentialGroup()
-                .addGap(19, 19, 19)
-                .addComponent(addButton)
-                .addGap(28, 28, 28)
-                .addComponent(editButton)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 31, Short.MAX_VALUE)
-                .addComponent(seachButton)
-                .addGap(32, 32, 32)
-                .addComponent(trolaiButton, javax.swing.GroupLayout.PREFERRED_SIZE, 92, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(26, 26, 26))
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel4Layout.createSequentialGroup()
-                .addContainerGap()
-                .addComponent(jScrollPane1)
-                .addContainerGap())
+            .addGap(0, 427, Short.MAX_VALUE)
         );
         jPanel4Layout.setVerticalGroup(
             jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(jPanel4Layout.createSequentialGroup()
-                .addGap(20, 20, 20)
-                .addGroup(jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(addButton)
-                    .addComponent(editButton, javax.swing.GroupLayout.PREFERRED_SIZE, 25, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(seachButton)
-                    .addComponent(trolaiButton, javax.swing.GroupLayout.PREFERRED_SIZE, 25, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 0, Short.MAX_VALUE)
-                .addContainerGap())
+            .addGap(0, 0, Short.MAX_VALUE)
         );
 
         javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
         jPanel1.setLayout(jPanel1Layout);
         jPanel1Layout.setHorizontalGroup(
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
+            .addGroup(jPanel1Layout.createSequentialGroup()
                 .addContainerGap()
-                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addComponent(jPanel2, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                     .addGroup(jPanel1Layout.createSequentialGroup()
-                        .addComponent(jPanel3, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addComponent(jPanel3, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(jPanel4, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)))
+                        .addComponent(jPanel4, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
                 .addContainerGap())
         );
         jPanel1Layout.setVerticalGroup(
@@ -231,68 +177,28 @@ public class DocgiaFrame extends javax.swing.JFrame {
                 .addContainerGap())
         );
 
-        getContentPane().add(jPanel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 690, 350));
+        getContentPane().add(jPanel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 620, 310));
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
-    private void thuesachButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_thuesachButtonActionPerformed
+    private void xsachButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_xsachButtonActionPerformed
         // TODO add your handling code here:
-        new QuanlisachFrame().setVisible(true);
+        new SachFrame().setVisible(true);
         this.dispose();
-    }//GEN-LAST:event_thuesachButtonActionPerformed
+    }//GEN-LAST:event_xsachButtonActionPerformed
 
-    private void trolaiButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_trolaiButtonActionPerformed
+    private void muonButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_muonButtonActionPerformed
         // TODO add your handling code here:
-        new NhanVienFrame().setVisible(true);
+        new MuonSachFrame().setVisible(true);
         this.dispose();
-    }//GEN-LAST:event_trolaiButtonActionPerformed
+    }//GEN-LAST:event_muonButtonActionPerformed
 
-    private void seachButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_seachButtonActionPerformed
+    private void dangxuatButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_dangxuatButtonActionPerformed
         // TODO add your handling code here:
-        /*int row = docgiaTable.getSelectedRow();
-        if(row == -1){
-            JOptionPane.showMessageDialog(QuanlidocgiaFrame.this, "Vui long chon user truoc","loi",JOptionPane.ERROR_MESSAGE);
-
-        }
-        else {
-            int confirm = JOptionPane.showConfirmDialog(QuanlidocgiaFrame.this,"Ban co chac muon xoa khong?");
-            if (confirm == JOptionPane.YES_OPTION){
-                String docgiaId = String.valueOf(String.valueOf(docgiaTable.getValueAt(row, 0)));
-
-                docgiaService.deleteDocgia(docgiaId);
-                defaultTableModel.setRowCount(0);
-
-                List<Docgia> docgias = docgiaService.getAllDocgias();
-                for (Docgia docgia : docgias){
-                    defaultTableModel.addRow(new Object[]{docgia.getMadocgia(), docgia.getTendocgia(), docgia.getTendangnhap(), docgia.getMatkhau(), docgia.getNamsinh(), docgia.getGioitinh()});
-                }
-
-            }
-        }*/
-    }//GEN-LAST:event_seachButtonActionPerformed
-
-    private void editButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_editButtonActionPerformed
-        // TODO add your handling code here:
-        /*int row = docgiaTable.getSelectedRow();
-        if(row == -1){
-            JOptionPane.showMessageDialog(QuanlidocgiaFrame.this, "Vui long chon user truoc","loi",JOptionPane.ERROR_MESSAGE);
-
-        }
-        else {
-
-            String docgiaId = String.valueOf(String.valueOf(docgiaTable.getValueAt(row, 0)));
-            new Suadocgia(docgiaId).setVisible(true);
-            this.dispose();
-
-        }
-    }//GEN-LAST:event_editButtonActionPerformed
-
-    private void addButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_addButtonActionPerformed
-        // TODO add your handling code here:
-        new ThemdocgiaFrame().setVisible(true);
-        this.dispose();*/
-    }//GEN-LAST:event_addButtonActionPerformed
+        new HomeFrame().setVisible(true);
+        this.dispose();
+    }//GEN-LAST:event_dangxuatButtonActionPerformed
 
     /**
      * @param args the command line arguments
@@ -330,17 +236,13 @@ public class DocgiaFrame extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JButton addButton;
-    private javax.swing.JButton editButton;
-    private javax.swing.JButton jButton1;
+    private javax.swing.JButton dangxuatButton;
+    private javax.swing.JLabel jLabel1;
     private javax.swing.JPanel jPanel1;
     private javax.swing.JPanel jPanel2;
     private javax.swing.JPanel jPanel3;
     private javax.swing.JPanel jPanel4;
-    private javax.swing.JScrollPane jScrollPane1;
-    private javax.swing.JTable jTable1;
-    private javax.swing.JButton seachButton;
-    private javax.swing.JButton thuesachButton;
-    private javax.swing.JButton trolaiButton;
+    private javax.swing.JButton muonButton;
+    private javax.swing.JButton xsachButton;
     // End of variables declaration//GEN-END:variables
 }

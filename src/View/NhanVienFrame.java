@@ -36,7 +36,8 @@ public class NhanVienFrame extends javax.swing.JFrame {
         jPanel2 = new javax.swing.JPanel();
         quanlisachButton = new javax.swing.JButton();
         quanlidocgiaButton = new javax.swing.JButton();
-        jButton3 = new javax.swing.JButton();
+        muontraButton = new javax.swing.JButton();
+        dangxuatButton = new javax.swing.JButton();
 
         jButton1.setText("jButton1");
 
@@ -81,7 +82,7 @@ public class NhanVienFrame extends javax.swing.JFrame {
 
         jPanel2.setBackground(new java.awt.Color(255, 204, 255));
 
-        quanlisachButton.setBackground(new java.awt.Color(255, 255, 153));
+        quanlisachButton.setBackground(new java.awt.Color(255, 255, 204));
         quanlisachButton.setText("Quản lí sách");
         quanlisachButton.setBorder(new javax.swing.border.MatteBorder(null));
         quanlisachButton.addActionListener(new java.awt.event.ActionListener() {
@@ -90,7 +91,7 @@ public class NhanVienFrame extends javax.swing.JFrame {
             }
         });
 
-        quanlidocgiaButton.setBackground(new java.awt.Color(255, 255, 153));
+        quanlidocgiaButton.setBackground(new java.awt.Color(255, 255, 204));
         quanlidocgiaButton.setText("Quản lí đọc giả");
         quanlidocgiaButton.setBorder(new javax.swing.border.MatteBorder(null));
         quanlidocgiaButton.addActionListener(new java.awt.event.ActionListener() {
@@ -99,7 +100,21 @@ public class NhanVienFrame extends javax.swing.JFrame {
             }
         });
 
-        jButton3.setText("Quản lí");
+        muontraButton.setBackground(new java.awt.Color(255, 255, 204));
+        muontraButton.setText("Quản lí mượn trả");
+        muontraButton.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                muontraButtonActionPerformed(evt);
+            }
+        });
+
+        dangxuatButton.setBackground(new java.awt.Color(255, 255, 204));
+        dangxuatButton.setText("Đăng xuất");
+        dangxuatButton.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                dangxuatButtonActionPerformed(evt);
+            }
+        });
 
         javax.swing.GroupLayout jPanel2Layout = new javax.swing.GroupLayout(jPanel2);
         jPanel2.setLayout(jPanel2Layout);
@@ -110,19 +125,22 @@ public class NhanVienFrame extends javax.swing.JFrame {
                 .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
                     .addComponent(quanlidocgiaButton, javax.swing.GroupLayout.DEFAULT_SIZE, 123, Short.MAX_VALUE)
                     .addComponent(quanlisachButton, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                    .addComponent(jButton3, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                    .addComponent(muontraButton, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(dangxuatButton, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
                 .addContainerGap(20, Short.MAX_VALUE))
         );
         jPanel2Layout.setVerticalGroup(
             jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel2Layout.createSequentialGroup()
                 .addGap(18, 18, 18)
-                .addComponent(quanlidocgiaButton, javax.swing.GroupLayout.PREFERRED_SIZE, 54, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addComponent(quanlidocgiaButton, javax.swing.GroupLayout.PREFERRED_SIZE, 47, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(13, 13, 13)
+                .addComponent(quanlisachButton, javax.swing.GroupLayout.PREFERRED_SIZE, 47, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                .addComponent(quanlisachButton, javax.swing.GroupLayout.PREFERRED_SIZE, 54, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(jButton3, javax.swing.GroupLayout.PREFERRED_SIZE, 52, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(51, Short.MAX_VALUE))
+                .addComponent(muontraButton, javax.swing.GroupLayout.PREFERRED_SIZE, 46, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addComponent(dangxuatButton, javax.swing.GroupLayout.PREFERRED_SIZE, 34, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap(19, Short.MAX_VALUE))
         );
 
         javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
@@ -168,6 +186,18 @@ public class NhanVienFrame extends javax.swing.JFrame {
         this.dispose();
     }//GEN-LAST:event_quanlisachButtonActionPerformed
 
+    private void muontraButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_muontraButtonActionPerformed
+        // TODO add your handling code here:
+        new QuanlimuontraFrame().setVisible(true);
+        this.dispose();
+    }//GEN-LAST:event_muontraButtonActionPerformed
+
+    private void dangxuatButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_dangxuatButtonActionPerformed
+        // TODO add your handling code here:
+        new HomeFrame().setVisible(true);
+        this.dispose();
+    }//GEN-LAST:event_dangxuatButtonActionPerformed
+
     /**
      * @param args the command line arguments
      */
@@ -204,14 +234,15 @@ public class NhanVienFrame extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JButton dangxuatButton;
     private javax.swing.JButton jButton1;
     private javax.swing.JButton jButton2;
-    private javax.swing.JButton jButton3;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JPanel jPanel1;
     private javax.swing.JPanel jPanel2;
     private javax.swing.JPanel jPanel4;
     private javax.swing.JPanel jPanel5;
+    private javax.swing.JButton muontraButton;
     private javax.swing.JButton quanlidocgiaButton;
     private javax.swing.JButton quanlisachButton;
     // End of variables declaration//GEN-END:variables
