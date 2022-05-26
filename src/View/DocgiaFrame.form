@@ -128,8 +128,8 @@
                       <EmptySpace type="separate" max="-2" attributes="0"/>
                       <Component id="xsachButton" min="-2" pref="46" max="-2" attributes="0"/>
                       <EmptySpace type="separate" max="-2" attributes="0"/>
-                      <Component id="dangxuatButton" min="-2" pref="38" max="-2" attributes="0"/>
-                      <EmptySpace pref="25" max="32767" attributes="0"/>
+                      <Component id="dangxuatButton" min="-2" pref="43" max="-2" attributes="0"/>
+                      <EmptySpace pref="20" max="32767" attributes="0"/>
                   </Group>
               </Group>
             </DimensionLayout>
