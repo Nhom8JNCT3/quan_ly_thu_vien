@@ -29,7 +29,7 @@ public class MuontraService {
     public void deleteMuontra(String mamuon){
         muontraDao.deleteMuontra(mamuon);
     }
-    public Muontra getSachByMamuon(String mamuon){
+    public Muontra getMuontraByMamuon(String mamuon){
         return muontraDao.getMuontraByMamuon(mamuon);
     }
     public void updateMuontra(Muontra muontra){
