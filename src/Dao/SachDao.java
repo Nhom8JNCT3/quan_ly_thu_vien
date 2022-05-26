@@ -86,8 +86,8 @@ public class SachDao {
             preparedStatement.setString(1, sach.getMasach());
             preparedStatement.setString(2, sach.getTensach());
             preparedStatement.setString(3, sach.getTacgia());
-            preparedStatement.setString(3, sach.getNhaxuatban());
-            preparedStatement.setString(4, sach.getNamxuatban());
+            preparedStatement.setString(4, sach.getNhaxuatban());
+            preparedStatement.setString(5, sach.getNamxuatban());
            
             
             
@@ -117,7 +117,7 @@ public class SachDao {
             System.out.println(rs);
             
         } catch (SQLException ex) {
-            Logger.getLogger(DocgiaDao.class.getName()).log(Level.SEVERE, null, ex);
+            Logger.getLogger(SachDao.class.getName()).log(Level.SEVERE, null, ex);
         }
         
         
