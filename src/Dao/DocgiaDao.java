@@ -79,7 +79,8 @@ public class DocgiaDao {
 
     public void addDocgia(Docgia docgia){
         Connection connection= JDBCConnection.getJDBCConnection();
-        String sql = "INSERT INTO DOCGIA(MADOCGIA, TENDOCGIA, TENDANGNHAP, MATKHAU, NAMSINH, GIOI TINH , LOP)"+ "VALUES(?,?,?,?,?,?,?) ";
+        
+        String sql = "INSERT INTO DOCGIA( MADOCGIA, TENDOCGIA, TENDANGNHAP, MATKHAU, NAMSINH, GIOITINH, LOP)"+ "VALUES(?,?,?,?,?,?,?) ";
        
       
         
