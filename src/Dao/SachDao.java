@@ -77,7 +77,7 @@ public class SachDao {
 
     public void addSach(Sach sach){
         Connection connection= JDBCConnection.getJDBCConnection();
-        String sql = "INSERT INTO SACH(MASACH, TENSACH, TACCGIA,TENXB, NAMXB)"+ "VALUES(?,?,?,?,?) ";
+        String sql = "INSERT INTO SACH(MASACH, TENSACH, TACGIA,TENXB, NAMXB)"+ "VALUES(?,?,?,?,?) ";
        
       
         
