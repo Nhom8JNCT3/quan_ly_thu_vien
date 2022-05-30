@@ -75,18 +75,17 @@ public class MuontraDao {
 
     public void addMuontra(Muontra muontra){
         Connection connection= JDBCConnection.getJDBCConnection();
-        String sql = "INSERT INTO MUONTRA(MAMUON, MADG, MASACH, NGAYMUON, NGAYHENTRA, NGAYTRA )"+ "VALUES(?,?,?,?,?,?) ";
+        String sql = "INSERT INTO MUONTRA( MADG, MASACH, NGAYMUON, NGAYHENTRA, NGAYTRA )"+ "VALUES(?,?,?,?,?) ";
        
       
         
         try {
-            PreparedStatement preparedStatement = connection.prepareStatement(sql);
-            preparedStatement.setString(1, muontra.getMamuon());
-            preparedStatement.setString(2, muontra.getMadg());
-            preparedStatement.setString(3, muontra.getMasach());
-            preparedStatement.setString(4, muontra.getNgaymuon());
-            preparedStatement.setString(5,muontra.getNgayhentra());
-            preparedStatement.setString(6, muontra.getNgaytra());          
+            PreparedStatement preparedStatement = connection.prepareStatement(sql);            
+            preparedStatement.setString(1, muontra.getMadg());
+            preparedStatement.setString(2, muontra.getMasach());
+            preparedStatement.setString(3, muontra.getNgaymuon());
+            preparedStatement.setString(4,muontra.getNgayhentra());
+            preparedStatement.setString(5, muontra.getNgaytra());          
             
             
             int rs = preparedStatement.executeUpdate();
@@ -100,7 +99,7 @@ public class MuontraDao {
     
     public void updateMuontra(Muontra muontra){
         Connection connection= JDBCConnection.getJDBCConnection();
-        String sql = "UPDATE Docgia SET MADG = ?, MASACH = ?, NGAYMUON = ?, NGAYHENTRA = ? ,"+"NGAYTRA=?  WHERE MAMUON =?";
+        String sql = "UPDATE MUONTRA SET MADG = ?, MASACH = ?, NGAYMUON = ?, NGAYHENTRA = ? ,"+"NGAYTRA=?  WHERE MAMUON =?";
         
         try {
             PreparedStatement preparedStatement = connection.prepareStatement(sql);
