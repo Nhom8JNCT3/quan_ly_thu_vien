@@ -21,8 +21,7 @@ public class Suadocgia extends javax.swing.JFrame {
     public Suadocgia(String DocgiaId) {
         initComponents();
         docgiaService = new DocgiaService();
-        docgia = docgiaService.getDocgiaById(DocgiaId);
-        initComponents();
+        docgia = docgiaService.getDocgiaById(DocgiaId);       
         idTextField.setText(String.valueOf(docgia.getMadocgia()));
         nameTextField.setText(docgia.getTendocgia());
         usernameTextField.setText(docgia.getTendangnhap());
@@ -215,7 +214,7 @@ public class Suadocgia extends javax.swing.JFrame {
         docgia.setMatkhau(String.valueOf(passwordField.getPassword()));
         docgia.setNamsinh(namsinhTextField.getText());
 
-        String gioitinh = "GIOITINH_DOCGIA";
+        String gioitinh = "";
         if (namRadioButton.isSelected()){
             gioitinh += "Nam";
         }
