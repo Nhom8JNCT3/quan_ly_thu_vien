@@ -22,8 +22,7 @@ public class SuaSachFrame extends javax.swing.JFrame {
     public SuaSachFrame(String SachId) {
         initComponents();
         sachService = new SachService();
-        sach = sachService.getSachById(SachId);
-        initComponents();
+        sach = sachService.getSachById(SachId);        
         idTextField.setText(String.valueOf(sach.getMasach()));
         nameTextField.setText(sach.getTensach());
         tacgiaTextField.setText(sach.getTacgia());
@@ -182,7 +181,7 @@ public class SuaSachFrame extends javax.swing.JFrame {
         sach.setNamxuatban(namxbTextField.getText());
         sach.setNhaxuatban(String.valueOf(nhaxbComboBox.getSelectedItem()) );
 
-        sachService.addSach(sach);
+        sachService.updateSach(sach);
         new QuanlisachFrame().setVisible(true);
         this.dispose();
     }//GEN-LAST:event_submitButtonActionPerformed
