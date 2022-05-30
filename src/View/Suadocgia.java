@@ -96,7 +96,7 @@ public class Suadocgia extends javax.swing.JFrame {
         });
 
         jLabel1.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
-        jLabel1.setText("Sửa Đọc giả");
+        jLabel1.setText("SỬA ĐỌC GIẢ");
 
         khacRadioButton.setText("Khác");
 
@@ -156,7 +156,7 @@ public class Suadocgia extends javax.swing.JFrame {
                                 .addComponent(submitButton))))
                     .addGroup(layout.createSequentialGroup()
                         .addGap(194, 194, 194)
-                        .addComponent(jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 93, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                        .addComponent(jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 120, javax.swing.GroupLayout.PREFERRED_SIZE)))
                 .addContainerGap(58, Short.MAX_VALUE))
         );
         layout.setVerticalGroup(
