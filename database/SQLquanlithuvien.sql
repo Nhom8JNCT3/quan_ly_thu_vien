@@ -59,9 +59,31 @@ create table Sach
 		  ('TCC2',N'Toán cao cấp 2', N'Phạm Văn Bình',N'Đại Học Quốc Gia',1998,100,49000,'S002' );
 
 
+
+-- tao hàm tự tăng mamuon
+
+CREATE FUNCTION AUTO_IDMM()
+RETURNS VARCHAR(5)
+AS
+BEGIN
+	DECLARE @ID VARCHAR(5)
+	IF (SELECT COUNT(MaMuon) FROM MuonTra) = 0
+		SET @ID = '0'
+	ELSE
+		SELECT @ID = MAX(RIGHT(MaMuon, 3)) FROM MuonTra
+		SELECT @ID = CASE
+			WHEN @ID >= 0 and @ID < 9 THEN 'MS00' + CONVERT(CHAR, CONVERT(INT, @ID) + 1)
+			WHEN @ID >= 9 THEN 'MS0' + CONVERT(CHAR, CONVERT(INT, @ID) + 1)
+		END
+	RETURN @ID
+END
+
+
+
+
 create table MuonTra
 (
-	MaMuon char(5) primary key,
+	MaMuon char(5) PRIMARY KEY CONSTRAINT IDKH DEFAULT DBO.AUTO_IDMM(),
 	MaDG char(5) not null,
 	Masach char(5) not null,
 	Ngaymuon char(20),
@@ -69,6 +91,8 @@ create table MuonTra
 	Ngaytra char(20),
 	
 )
+
+
 
 insert into MuonTra
 	values('MS001','MDG01','TCC2','2/2/2022','2/8/2022','5/6/2022'),
