@@ -109,9 +109,19 @@ public class QuanlimuontraFrame extends javax.swing.JFrame {
 
         qldgButton.setBackground(new java.awt.Color(255, 255, 204));
         qldgButton.setText("Quản lí đọc giả");
+        qldgButton.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                qldgButtonActionPerformed(evt);
+            }
+        });
 
         qlsButton.setBackground(new java.awt.Color(255, 255, 204));
         qlsButton.setText("Quản lí sách");
+        qlsButton.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                qlsButtonActionPerformed(evt);
+            }
+        });
 
         javax.swing.GroupLayout jPanel3Layout = new javax.swing.GroupLayout(jPanel3);
         jPanel3.setLayout(jPanel3Layout);
@@ -305,6 +315,18 @@ public class QuanlimuontraFrame extends javax.swing.JFrame {
             }
         }
     }//GEN-LAST:event_deleteButtonActionPerformed
+
+    private void qlsButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_qlsButtonActionPerformed
+        // TODO add your handling code here:
+        new QuanlisachFrame().setVisible(true);
+        this.dispose();
+    }//GEN-LAST:event_qlsButtonActionPerformed
+
+    private void qldgButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_qldgButtonActionPerformed
+        // TODO add your handling code here:
+        new QuanlidocgiaFrame().setVisible(true);
+        this.dispose();
+    }//GEN-LAST:event_qldgButtonActionPerformed
 
     /**
      * @param args the command line arguments
