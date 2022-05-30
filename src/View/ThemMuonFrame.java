@@ -34,13 +34,11 @@ public class ThemMuonFrame extends javax.swing.JFrame {
     private void initComponents() {
 
         jLabel1 = new javax.swing.JLabel();
-        jLabel2 = new javax.swing.JLabel();
         jLabel3 = new javax.swing.JLabel();
         jLabel4 = new javax.swing.JLabel();
         jLabel5 = new javax.swing.JLabel();
         jLabel6 = new javax.swing.JLabel();
         jLabel7 = new javax.swing.JLabel();
-        mamuonTextField = new javax.swing.JTextField();
         madocgiaTextField = new javax.swing.JTextField();
         masachTextField = new javax.swing.JTextField();
         ngaymuonTextField = new javax.swing.JTextField();
@@ -53,8 +51,6 @@ public class ThemMuonFrame extends javax.swing.JFrame {
 
         jLabel1.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
         jLabel1.setText("THÊM NGƯỜI MƯỢN SÁCH");
-
-        jLabel2.setText("Mã mượn");
 
         jLabel3.setText("Mã đọc giả");
 
@@ -87,7 +83,6 @@ public class ThemMuonFrame extends javax.swing.JFrame {
             .addGroup(layout.createSequentialGroup()
                 .addGap(40, 40, 40)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(jLabel2)
                     .addComponent(jLabel3)
                     .addComponent(jLabel4)
                     .addComponent(jLabel5)
@@ -95,7 +90,6 @@ public class ThemMuonFrame extends javax.swing.JFrame {
                     .addComponent(jLabel7))
                 .addGap(37, 37, 37)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                    .addComponent(mamuonTextField)
                     .addComponent(madocgiaTextField)
                     .addComponent(masachTextField)
                     .addComponent(ngaymuonTextField)
@@ -119,11 +113,7 @@ public class ThemMuonFrame extends javax.swing.JFrame {
             .addGroup(layout.createSequentialGroup()
                 .addGap(33, 33, 33)
                 .addComponent(jLabel1)
-                .addGap(39, 39, 39)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jLabel2)
-                    .addComponent(mamuonTextField, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(18, 18, 18)
+                .addGap(77, 77, 77)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLabel3)
                     .addComponent(madocgiaTextField, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
@@ -154,8 +144,7 @@ public class ThemMuonFrame extends javax.swing.JFrame {
     }// </editor-fold>//GEN-END:initComponents
 
     private void submitButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_submitButtonActionPerformed
-        // TODO add your handling code here:
-        muontra.setMamuon(mamuonTextField.getText());
+        // TODO add your handling code here:       
         muontra.setMadg(madocgiaTextField.getText());
         muontra.setMasach(masachTextField.getText());
         muontra.setNgaymuon(ngaymuonTextField.getText());
@@ -213,14 +202,12 @@ public class ThemMuonFrame extends javax.swing.JFrame {
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton jButton2;
     private javax.swing.JLabel jLabel1;
-    private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel3;
     private javax.swing.JLabel jLabel4;
     private javax.swing.JLabel jLabel5;
     private javax.swing.JLabel jLabel6;
     private javax.swing.JLabel jLabel7;
     private javax.swing.JTextField madocgiaTextField;
-    private javax.swing.JTextField mamuonTextField;
     private javax.swing.JTextField masachTextField;
     private javax.swing.JTextField ngayhentraTextField;
     private javax.swing.JTextField ngaymuonTextField;
