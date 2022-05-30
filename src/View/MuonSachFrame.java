@@ -143,7 +143,7 @@ public class MuonSachFrame extends javax.swing.JFrame {
         dsmuontra.setMasach(masachTextField.getText());
         dsmuontra.setNgaymuon(ngaymuonTextField.getText());
         dsmuontraService.addMuontra(dsmuontra);
-        new QuanlidocgiaFrame().setVisible(true);
+        new DocgiaFrame().setVisible(true);
         this.dispose();
     }//GEN-LAST:event_muonButtonActionPerformed
 
