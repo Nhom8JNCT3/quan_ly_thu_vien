@@ -60,7 +60,7 @@ create table Sach
 
 
 
--- tao hàm tự tăng mamuon
+-- Tạo hàm tự tăng mamuon
 
 CREATE FUNCTION AUTO_IDMM()
 RETURNS VARCHAR(5)
