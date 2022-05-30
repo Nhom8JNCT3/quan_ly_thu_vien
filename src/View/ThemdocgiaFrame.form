@@ -53,24 +53,22 @@
               </Group>
               <EmptySpace min="-2" pref="15" max="-2" attributes="0"/>
               <Group type="103" groupAlignment="0" attributes="0">
-                  <Group type="103" groupAlignment="0" attributes="0">
-                      <Group type="102" attributes="0">
-                          <Component id="namRadioButton" min="-2" max="-2" attributes="0"/>
-                          <EmptySpace min="-2" pref="35" max="-2" attributes="0"/>
-                          <Component id="nuRadioButton" min="-2" max="-2" attributes="0"/>
-                          <EmptySpace type="separate" max="-2" attributes="0"/>
-                          <Component id="khacRadioButton" min="-2" max="-2" attributes="0"/>
-                      </Group>
-                      <Group type="103" groupAlignment="1" max="-2" attributes="0">
-                          <Component id="lopTextField" pref="229" max="32767" attributes="0"/>
-                          <Component id="namsinhTextField" alignment="0" max="32767" attributes="0"/>
-                          <Component id="nameTextField" alignment="0" pref="229" max="32767" attributes="0"/>
-                          <Component id="idTextField" alignment="0" max="32767" attributes="0"/>
-                          <Component id="usernameTextField" alignment="0" max="32767" attributes="0"/>
-                          <Component id="passwordField" alignment="0" max="32767" attributes="0"/>
-                      </Group>
-                      <Component id="jLabel1" alignment="0" min="-2" max="-2" attributes="0"/>
+                  <Group type="102" attributes="0">
+                      <Component id="namRadioButton" min="-2" max="-2" attributes="0"/>
+                      <EmptySpace min="-2" pref="35" max="-2" attributes="0"/>
+                      <Component id="nuRadioButton" min="-2" max="-2" attributes="0"/>
+                      <EmptySpace type="separate" max="-2" attributes="0"/>
+                      <Component id="khacRadioButton" min="-2" max="-2" attributes="0"/>
                   </Group>
+                  <Group type="103" groupAlignment="1" max="-2" attributes="0">
+                      <Component id="lopTextField" pref="229" max="32767" attributes="0"/>
+                      <Component id="namsinhTextField" alignment="0" max="32767" attributes="0"/>
+                      <Component id="nameTextField" alignment="0" pref="229" max="32767" attributes="0"/>
+                      <Component id="idTextField" alignment="0" max="32767" attributes="0"/>
+                      <Component id="usernameTextField" alignment="0" max="32767" attributes="0"/>
+                      <Component id="passwordField" alignment="0" max="32767" attributes="0"/>
+                  </Group>
+                  <Component id="jLabel1" alignment="0" min="-2" max="-2" attributes="0"/>
                   <Group type="102" alignment="0" attributes="0">
                       <EmptySpace min="-2" pref="89" max="-2" attributes="0"/>
                       <Component id="submitButton" min="-2" max="-2" attributes="0"/>

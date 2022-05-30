@@ -202,7 +202,7 @@ public class ThemdocgiaFrame extends javax.swing.JFrame {
         docgia.setTendangnhap(usernameTextField.getText());
         docgia.setMatkhau(String.valueOf(passwordField.getPassword()));
         docgia.setNamsinh(namsinhTextField.getText());
-        docgia.setLop(lopTextField.getText());
+        
         
         String gioitinh = "";
         if (namRadioButton.isSelected()){
@@ -215,6 +215,7 @@ public class ThemdocgiaFrame extends javax.swing.JFrame {
             gioitinh += "Khác";
         }
         docgia.setGioitinh(gioitinh);
+        docgia.setLop(lopTextField.getText());
 
         docgiaService.addDocgia(docgia);
         new QuanlidocgiaFrame().setVisible(true);
