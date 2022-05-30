@@ -40,12 +40,12 @@ public class ThemSachFrame extends javax.swing.JFrame {
         namxbLabel = new javax.swing.JLabel();
         backButton = new javax.swing.JButton();
         submitButton = new javax.swing.JButton();
-        nhaxbField = new javax.swing.JPasswordField();
+        namxbTextField = new javax.swing.JPasswordField();
         tacgiaTextField = new javax.swing.JTextField();
         jLabel1 = new javax.swing.JLabel();
         jLabel2 = new javax.swing.JLabel();
         idTextField = new javax.swing.JTextField();
-        namxbComboBox = new javax.swing.JComboBox<>();
+        nhaxbComboBox = new javax.swing.JComboBox<>();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
@@ -76,7 +76,7 @@ public class ThemSachFrame extends javax.swing.JFrame {
 
         jLabel2.setText("Mã sách");
 
-        namxbComboBox.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Bộ GD-DT", "Đại học Quốc gia", "Kim Đồng" }));
+        nhaxbComboBox.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Bộ GD-DT", "Đại học Quốc gia", "Kim Đồng" }));
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
@@ -98,8 +98,8 @@ public class ThemSachFrame extends javax.swing.JFrame {
                         .addComponent(nameTextField, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, 229, Short.MAX_VALUE)
                         .addComponent(idTextField, javax.swing.GroupLayout.Alignment.LEADING)
                         .addComponent(tacgiaTextField, javax.swing.GroupLayout.Alignment.LEADING)
-                        .addComponent(nhaxbField, javax.swing.GroupLayout.Alignment.LEADING)
-                        .addComponent(namxbComboBox, javax.swing.GroupLayout.Alignment.LEADING, 0, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)))
+                        .addComponent(namxbTextField, javax.swing.GroupLayout.Alignment.LEADING)
+                        .addComponent(nhaxbComboBox, javax.swing.GroupLayout.Alignment.LEADING, 0, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)))
                 .addContainerGap(27, Short.MAX_VALUE))
             .addGroup(layout.createSequentialGroup()
                 .addGap(94, 94, 94)
@@ -116,28 +116,26 @@ public class ThemSachFrame extends javax.swing.JFrame {
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLabel2)
                     .addComponent(idTextField, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 17, Short.MAX_VALUE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 20, Short.MAX_VALUE)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addComponent(nameTextField, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, 20, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(jLabel3, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, 20, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(18, 18, 18)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                    .addGroup(layout.createSequentialGroup()
-                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                            .addComponent(tacgiaLabel)
-                            .addComponent(tacgiaTextField, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                        .addGap(28, 28, 28)
-                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                            .addComponent(nhaxbLabel)
-                            .addComponent(nhaxbField, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                        .addGap(18, 18, 18)
-                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                            .addComponent(namxbLabel)
-                            .addComponent(namxbComboBox, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                        .addGap(67, 67, 67))
-                    .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                        .addComponent(submitButton)
-                        .addComponent(backButton, javax.swing.GroupLayout.PREFERRED_SIZE, 23, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(tacgiaLabel)
+                    .addComponent(tacgiaTextField, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGap(28, 28, 28)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(nhaxbLabel)
+                    .addComponent(nhaxbComboBox, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGap(18, 18, 18)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(namxbLabel)
+                    .addComponent(namxbTextField, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGap(41, 41, 41)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(submitButton)
+                    .addComponent(backButton, javax.swing.GroupLayout.PREFERRED_SIZE, 23, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(19, 19, 19))
         );
 
@@ -155,8 +153,8 @@ public class ThemSachFrame extends javax.swing.JFrame {
         sach.setMasach(idTextField.getText());
         sach.setTensach(nameTextField.getText());
         sach.setTacgia(tacgiaTextField.getText());
-        sach.setNhaxuatban(String.valueOf(nhaxbField.getPassword()));
-        sach.setNamxuatban((String) namxbComboBox.getSelectedItem());                
+        sach.setNamxuatban(namxbTextField.getText());
+        sach.setNhaxuatban((String) nhaxbComboBox.getSelectedItem());                
 
         sachService.addSach(sach);
         new QuanlisachFrame().setVisible(true);
@@ -205,9 +203,9 @@ public class ThemSachFrame extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel3;
     private javax.swing.JTextField nameTextField;
-    private javax.swing.JComboBox<String> namxbComboBox;
     private javax.swing.JLabel namxbLabel;
-    private javax.swing.JPasswordField nhaxbField;
+    private javax.swing.JPasswordField namxbTextField;
+    private javax.swing.JComboBox<String> nhaxbComboBox;
     private javax.swing.JLabel nhaxbLabel;
     private javax.swing.JButton submitButton;
     private javax.swing.JLabel tacgiaLabel;
