@@ -26,7 +26,6 @@
           <Group type="102" alignment="0" attributes="0">
               <EmptySpace min="-2" pref="40" max="-2" attributes="0"/>
               <Group type="103" groupAlignment="0" attributes="0">
-                  <Component id="jLabel2" alignment="0" min="-2" max="-2" attributes="0"/>
                   <Component id="jLabel3" alignment="0" min="-2" max="-2" attributes="0"/>
                   <Component id="jLabel4" alignment="0" min="-2" max="-2" attributes="0"/>
                   <Component id="jLabel5" alignment="0" min="-2" max="-2" attributes="0"/>
@@ -35,7 +34,6 @@
               </Group>
               <EmptySpace min="-2" pref="37" max="-2" attributes="0"/>
               <Group type="103" groupAlignment="0" max="-2" attributes="0">
-                  <Component id="mamuonTextField" max="32767" attributes="0"/>
                   <Component id="madocgiaTextField" max="32767" attributes="0"/>
                   <Component id="masachTextField" max="32767" attributes="0"/>
                   <Component id="ngaymuonTextField" max="32767" attributes="0"/>
@@ -66,12 +64,7 @@
           <Group type="102" alignment="0" attributes="0">
               <EmptySpace min="-2" pref="33" max="-2" attributes="0"/>
               <Component id="jLabel1" min="-2" max="-2" attributes="0"/>
-              <EmptySpace min="-2" pref="39" max="-2" attributes="0"/>
-              <Group type="103" groupAlignment="3" attributes="0">
-                  <Component id="jLabel2" alignment="3" min="-2" max="-2" attributes="0"/>
-                  <Component id="mamuonTextField" alignment="3" min="-2" max="-2" attributes="0"/>
-              </Group>
-              <EmptySpace type="separate" max="-2" attributes="0"/>
+              <EmptySpace min="-2" pref="77" max="-2" attributes="0"/>
               <Group type="103" groupAlignment="3" attributes="0">
                   <Component id="jLabel3" alignment="3" min="-2" max="-2" attributes="0"/>
                   <Component id="madocgiaTextField" alignment="3" min="-2" max="-2" attributes="0"/>
@@ -115,11 +108,6 @@
         <Property name="text" type="java.lang.String" value="TH&#xca;M NG&#x1af;&#x1edc;I M&#x1af;&#x1ee2;N S&#xc1;CH"/>
       </Properties>
     </Component>
-    <Component class="javax.swing.JLabel" name="jLabel2">
-      <Properties>
-        <Property name="text" type="java.lang.String" value="M&#xe3; m&#x1b0;&#x1ee3;n"/>
-      </Properties>
-    </Component>
     <Component class="javax.swing.JLabel" name="jLabel3">
       <Properties>
         <Property name="text" type="java.lang.String" value="M&#xe3; &#x111;&#x1ecd;c gi&#x1ea3;"/>
@@ -144,8 +132,6 @@
       <Properties>
         <Property name="text" type="java.lang.String" value="Ng&#xe0;y tr&#x1ea3;"/>
       </Properties>
-    </Component>
-    <Component class="javax.swing.JTextField" name="mamuonTextField">
     </Component>
     <Component class="javax.swing.JTextField" name="madocgiaTextField">
     </Component>
