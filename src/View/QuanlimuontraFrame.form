@@ -168,6 +168,9 @@
                 </Property>
                 <Property name="text" type="java.lang.String" value="Qu&#x1ea3;n l&#xed; &#x111;&#x1ecd;c gi&#x1ea3;"/>
               </Properties>
+              <Events>
+                <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="qldgButtonActionPerformed"/>
+              </Events>
             </Component>
             <Component class="javax.swing.JButton" name="qlsButton">
               <Properties>
@@ -176,6 +179,9 @@
                 </Property>
                 <Property name="text" type="java.lang.String" value="Qu&#x1ea3;n l&#xed; s&#xe1;ch"/>
               </Properties>
+              <Events>
+                <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="qlsButtonActionPerformed"/>
+              </Events>
             </Component>
           </SubComponents>
         </Container>
