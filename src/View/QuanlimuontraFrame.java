@@ -173,6 +173,11 @@ public class QuanlimuontraFrame extends javax.swing.JFrame {
 
         deleteButton.setIcon(new javax.swing.ImageIcon(getClass().getResource("/View/delete.png"))); // NOI18N
         deleteButton.setText("Xoá");
+        deleteButton.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                deleteButtonActionPerformed(evt);
+            }
+        });
 
         javax.swing.GroupLayout jPanel4Layout = new javax.swing.GroupLayout(jPanel4);
         jPanel4.setLayout(jPanel4Layout);
@@ -276,6 +281,30 @@ public class QuanlimuontraFrame extends javax.swing.JFrame {
 
         }
     }//GEN-LAST:event_editButtonActionPerformed
+
+    private void deleteButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_deleteButtonActionPerformed
+        // TODO add your handling code here:
+        int row = muontraTable.getSelectedRow();
+        if(row == -1){
+            JOptionPane.showMessageDialog(QuanlimuontraFrame.this, "Vui long chon user truoc","loi",JOptionPane.ERROR_MESSAGE);
+            
+        }
+        else {
+            int confirm = JOptionPane.showConfirmDialog(QuanlimuontraFrame.this,"Ban co chac muon xoa khong?");
+            if (confirm == JOptionPane.YES_OPTION){
+                String mm = String.valueOf(String.valueOf(muontraTable.getValueAt(row, 0)));
+            
+                muontraService.deleteMuontra(mm);
+                defaultTableModel.setRowCount(0);
+         
+                List<Muontra> muontras = muontraService.getAllMuontras();
+                for (Muontra muontra : muontras){
+                   defaultTableModel.addRow(new Object[]{muontra.getMamuon(), muontra.getMadg(), muontra.getMasach(), muontra.getNgaymuon(), muontra.getNgayhentra(), muontra.getNgaytra()});
+               }
+                
+            }
+        }
+    }//GEN-LAST:event_deleteButtonActionPerformed
 
     /**
      * @param args the command line arguments
