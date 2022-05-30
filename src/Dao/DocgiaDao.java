@@ -80,7 +80,7 @@ public class DocgiaDao {
     public void addDocgia(Docgia docgia){
         Connection connection= JDBCConnection.getJDBCConnection();
         
-        String sql = "INSERT INTO DOCGIA( MADOCGIA, TENDOCGIA, TENDANGNHAP, MATKHAU, NAMSINH, GIOITINH, LOP)"+ "VALUES(?,?,?,?,?,?,?) ";
+        String sql = "INSERT INTO DOCGIA( MADOCGIA, TENDOCGIA, TENDANGNHAP, MATKHAU,  GIOITINH, NAMSINH, LOP)"+ "VALUES(?,?,?,?,?,?,?) ";
        
       
         
@@ -90,8 +90,8 @@ public class DocgiaDao {
             preparedStatement.setString(2, docgia.getTendocgia());
             preparedStatement.setString(3, docgia.getTendangnhap());
             preparedStatement.setString(4, docgia.getMatkhau());
-            preparedStatement.setString(5,docgia.getNamsinh());
-            preparedStatement.setString(6, docgia.getGioitinh());
+            preparedStatement.setString(5, docgia.getGioitinh());
+            preparedStatement.setString(6,docgia.getNamsinh());            
             preparedStatement.setString(7, docgia.getLop());
             
             
