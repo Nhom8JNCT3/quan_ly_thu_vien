@@ -8,6 +8,7 @@ package View;
 import Service.DocgiaService;
 import Service.MuontraService;
 import java.util.List;
+import javax.swing.JOptionPane;
 import javax.swing.table.DefaultTableModel;
 import model.Docgia;
 import model.Muontra;
@@ -164,6 +165,11 @@ public class QuanlimuontraFrame extends javax.swing.JFrame {
 
         editButton.setIcon(new javax.swing.ImageIcon(getClass().getResource("/View/edit.png"))); // NOI18N
         editButton.setText("Sửa");
+        editButton.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                editButtonActionPerformed(evt);
+            }
+        });
 
         deleteButton.setIcon(new javax.swing.ImageIcon(getClass().getResource("/View/delete.png"))); // NOI18N
         deleteButton.setText("Xoá");
@@ -253,6 +259,23 @@ public class QuanlimuontraFrame extends javax.swing.JFrame {
         new ThemMuonFrame().setVisible(true);
         this.dispose();
     }//GEN-LAST:event_addButtonActionPerformed
+
+    private void editButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_editButtonActionPerformed
+        // TODO add your handling code here:
+        int row = muontraTable.getSelectedRow();
+        if(row == -1){
+            JOptionPane.showMessageDialog(QuanlimuontraFrame.this, "Vui long chon user truoc","loi",JOptionPane.ERROR_MESSAGE);
+
+        }
+        else {
+
+            String mm = String.valueOf(String.valueOf(muontraTable.getValueAt(row, 0)));
+            //new SuaSachFrame(sachId).setVisible(true);
+            new SuaMuonFrame(mm).setVisible(true);
+            this.dispose();
+
+        }
+    }//GEN-LAST:event_editButtonActionPerformed
 
     /**
      * @param args the command line arguments
